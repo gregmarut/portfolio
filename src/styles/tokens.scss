@@ -1,0 +1,22 @@
+:root {
+    --bg: #0a0a0c;
+    --bg-2: #101014;
+    --surface: #14141a;
+    --surface-2: #1b1b22;
+    --line: #25252e;
+    --line-soft: #1e1e26;
+    --text: #ededf0;
+    --text-2: #b4b4be;
+    --muted: #71717a;
+    --muted-2: #52525b;
+    --accent: #4ade80;
+    --accent-2: #a78bfa;
+    --accent-soft: rgba(74, 222, 128, 0.14);
+    --success: #4ade80;
+    --warn: #fbbf24;
+    --maxw: 1180px;
+    --gutter: clamp(20px, 4vw, 56px);
+    --radius: 14px;
+    --radius-lg: 22px;
+    --density: 1;
+}

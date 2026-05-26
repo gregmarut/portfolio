@@ -1,0 +1,30 @@
+@use 'styles/tokens';
+
+.footer {
+    border-top: 1px solid var(--line-soft);
+    padding: 24px var(--gutter);
+    margin-top: 40px;
+
+    &__inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__line {
+        font-size: 12px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__comment {
+        color: var(--muted-2);
+    }
+
+    &__sep {
+        color: var(--line);
+    }
+}

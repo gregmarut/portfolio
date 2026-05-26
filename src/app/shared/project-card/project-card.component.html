@@ -1,0 +1,95 @@
+@if (layout() === 'cards') {
+    <div class="pc" [class.pc--expanded]="expanded()" (click)="toggle()">
+        <div class="pc__head">
+            <app-project-mark [name]="project().name" />
+            <div class="pc__meta">
+                <span class="pc__year mono">{{ project().year }}</span>
+                <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
+                    project().status
+                }}</span>
+            </div>
+        </div>
+        <h3 class="pc__name">{{ project().name }}</h3>
+        <p class="pc__tagline">{{ project().tagline }}</p>
+        @if (expanded()) {
+            @for (para of project().desc; track para) {
+                <p class="pc__desc">{{ para }}</p>
+            }
+        }
+        <div class="pc__tags">
+            @for (tag of project().tags; track tag) {
+                <span class="tag tag--ghost">{{ tag }}</span>
+            }
+        </div>
+        @if (null !== project().link) {
+            <a
+                class="pc__link btn btn--ghost"
+                [href]="project().link"
+                target="_blank"
+                rel="noopener"
+                (click)="$event.stopPropagation()"
+            >
+                View project
+                <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+            </a>
+        }
+    </div>
+} @else {
+    <div class="pl" [class.pl--expanded]="expanded()">
+        <div class="pl__head" (click)="toggle()">
+            <app-project-mark [name]="project().name" />
+            <h3 class="pl__name">{{ project().name }}</h3>
+            <p class="pl__tagline">{{ project().tagline }}</p>
+            <div class="pl__right">
+                <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
+                    project().status
+                }}</span>
+                <span class="pl__year mono">{{ project().year }}</span>
+                <svg
+                    class="pl__chevron"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </div>
+        </div>
+        @if (expanded()) {
+            <div class="pl__body">
+                @for (para of project().desc; track para) {
+                    <p class="pl__desc">{{ para }}</p>
+                }
+                <div class="pl__tags">
+                    @for (tag of project().tags; track tag) {
+                        <span class="tag tag--ghost">{{ tag }}</span>
+                    }
+                </div>
+                @if (null !== project().link) {
+                    <a
+                        class="btn btn--ghost"
+                        [href]="project().link"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View project
+                    </a>
+                }
+            </div>
+        }
+    </div>
+}

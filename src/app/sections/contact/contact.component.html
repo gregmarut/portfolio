@@ -1,0 +1,54 @@
+<section id="contact" class="contact">
+    <div class="contact__inner">
+        <!-- Left -->
+        <div class="contact__left">
+            <p class="contact__kicker mono">05 — Contact</p>
+            <h2 class="contact__title">
+                Let's build<br />
+                something <em class="serif">great.</em>
+            </h2>
+            <p class="contact__sub">
+                Open to full-time roles, contract work, and interesting conversations. If you have
+                something worth building, let's talk.
+            </p>
+            <a href="mailto:greg.marut@gmail.com" class="btn btn--primary">
+                Send an email
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0 1.1.9 2 2 2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Right -->
+        <div class="contact__right">
+            @for (link of links; track link.label) {
+                <a class="contact__row" [href]="link.href" target="_blank" rel="noopener">
+                    <span class="contact__row-label mono">{{ link.label }}</span>
+                    <span class="contact__row-val">{{ link.key }}</span>
+                    <svg
+                        class="contact__row-arrow"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </a>
+            }
+        </div>
+    </div>
+</section>

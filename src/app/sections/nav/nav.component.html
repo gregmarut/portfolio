@@ -1,0 +1,33 @@
+<nav class="nav" [class.nav--scrolled]="scrolled()">
+    <div class="nav__inner">
+        <!-- Logo mark -->
+        <button class="nav__brand" (click)="scrollTo('top')" aria-label="Back to top">
+            <span class="nav__mark">
+                <span class="nav__chip"></span>
+            </span>
+            <span class="nav__name mono">greg<span class="nav__marut">.marut</span></span>
+        </button>
+
+        <!-- Links -->
+        <ul class="nav__links" role="list">
+            @for (link of links; track link.id) {
+                <li>
+                    <button
+                        class="nav__link"
+                        [class.nav__link--active]="activeSection() === link.id"
+                        (click)="scrollTo(link.id)"
+                    >
+                        <span class="nav__num mono">{{ link.num }}</span>
+                        {{ link.label }}
+                    </button>
+                </li>
+            }
+        </ul>
+
+        <!-- Available pill -->
+        <div class="nav__pill">
+            <span class="status-dot"></span>
+            Available
+        </div>
+    </div>
+</nav>

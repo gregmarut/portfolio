@@ -1,0 +1,9 @@
+<header class="sh">
+    <p class="sh__kicker mono">
+        <span class="sh__num">{{ num() }}</span> — {{ label() }}
+    </p>
+    <h2 class="sh__title">{{ title() }}</h2>
+    @if (sub()) {
+        <p class="sh__sub">{{ sub() }}</p>
+    }
+</header>

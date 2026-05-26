@@ -1,0 +1,44 @@
+<div class="er" [class.er--open]="open()">
+    <div class="er__head" (click)="toggle.emit()">
+        <div class="er__left">
+            <span class="er__date mono">{{ job().from }} – {{ job().to }}</span>
+            <div>
+                <h3 class="er__role">{{ job().title }}</h3>
+                <span class="er__company">{{ job().company }} · {{ job().location }}</span>
+            </div>
+        </div>
+        <div class="er__right">
+            <div class="er__tags">
+                @for (tag of job().tags.slice(0, 3); track tag) {
+                    <span class="tag tag--ghost">{{ tag }}</span>
+                }
+            </div>
+            <svg
+                class="er__chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <polyline points="6 9 12 15 18 9" />
+            </svg>
+        </div>
+    </div>
+
+    @if (open()) {
+        <div class="er__body">
+            <ul class="er__bullets">
+                @for (bullet of job().bullets; track bullet) {
+                    <li class="er__bullet">{{ bullet }}</li>
+                }
+            </ul>
+            <div class="er__all-tags">
+                @for (tag of job().tags; track tag) {
+                    <span class="tag tag--ghost">{{ tag }}</span>
+                }
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,110 @@
+@use 'styles/tokens';
+
+.contact {
+    padding: clamp(80px, 10vw, 120px) var(--gutter);
+
+    &__inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: clamp(40px, 6vw, 80px);
+        align-items: start;
+
+        @media (max-width: 880px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__kicker {
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-size: clamp(32px, 4.5vw, 54px);
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+        color: var(--text);
+        margin-bottom: 20px;
+
+        em {
+            font-style: italic;
+            color: var(--accent);
+        }
+    }
+
+    &__sub {
+        font-size: 15px;
+        color: var(--text-2);
+        line-height: 1.7;
+        max-width: 420px;
+        margin-bottom: 32px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line-soft);
+        transition:
+            border-color 0.15s,
+            transform 0.15s,
+            background 0.15s;
+        text-decoration: none;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background: var(--surface);
+            border-color: var(--accent);
+            transform: translateX(4px);
+
+            .contact__row-val {
+                color: var(--accent);
+            }
+
+            .contact__row-arrow {
+                color: var(--accent);
+            }
+        }
+    }
+
+    &__row-label {
+        font-size: 11px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+
+    &__row-val {
+        font-size: 13px;
+        color: var(--text-2);
+        flex: 1;
+        transition: color 0.15s;
+    }
+
+    &__row-arrow {
+        color: var(--muted);
+        flex-shrink: 0;
+        transition: color 0.15s;
+    }
+}

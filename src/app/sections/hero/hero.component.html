@@ -1,0 +1,71 @@
+<header class="hero">
+    <div class="hero__inner">
+        <!-- left column -->
+        <div class="hero__left">
+            <!-- meta pill -->
+            <div class="hero__meta mono">
+                <span class="status-dot"></span>
+                Greg Marut · Director of R&amp;D · Purcellville, VA
+            </div>
+
+            <!-- heading -->
+            <h1 class="hero__h1">
+                Building <em class="serif">elegant</em><br/>
+                software that<br/>
+                <em class="serif">scales.</em>
+            </h1>
+
+            <!-- lede -->
+            <p class="hero__lede">
+                Software engineer specializing in full-stack development and 0→1 product building. I turn complex problems
+                into clean, performant systems -- from distributed backends to pixel-perfect
+                frontends.
+            </p>
+
+            <!-- ctas -->
+            <div class="hero__ctas">
+                <a href="#work" class="btn btn--primary" (click)="scrollTo($event, 'work')">
+                    View my work
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </a>
+                <a href="mailto:greg.marut@gmail.com" class="btn btn--ghost"> Get in touch </a>
+            </div>
+
+            <!-- stats grid -->
+            <div class="hero__stats">
+                @for (stat of stats; track stat.label) {
+                    <div class="hero__stat">
+                        <span class="hero__stat-val mono">{{ stat.value }}</span>
+                        <span class="hero__stat-label">{{ stat.label }}</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- right column: terminal -->
+        <div class="hero__right">
+            <app-terminal/>
+        </div>
+    </div>
+
+    <!-- marquee strip -->
+    <div class="hero__marq" aria-hidden="true">
+        <div class="hero__marq-track">
+            @for (item of marqueeItems; track $index) {
+                <span class="hero__marq-item mono">{{ item }}</span>
+            }
+            @for (item of marqueeItems; track $index) {
+                <span class="hero__marq-item mono">{{ item }}</span>
+            }
+        </div>
+    </div>
+</header>
