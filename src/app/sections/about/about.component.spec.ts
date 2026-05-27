@@ -39,9 +39,9 @@ describe('AboutComponent', () => {
         expect(principles.length).toBe(4);
     });
 
-    it('should have 3 spec card rows', () => {
+    it('should have 4 logbook card rows', () => {
         const specRows = fixture.nativeElement.querySelectorAll('.spec .row');
-        expect(specRows.length).toBe(3);
+        expect(specRows.length).toBe(4);
     });
 
     it('should render app-section-header component', () => {
