@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { TerminalComponent } from '../../shared/terminal/terminal.component';
 
 const STATS = [
-    { value: '25', label: 'years building' },
-    { value: '4', label: 'companies founded' },
+    { value: '25+', label: 'years building' },
+    { value: '15+', label: 'prototypes' },
     { value: '6', label: 'platforms shipped' },
     { value: 'KJYO', label: 'home airport' },
 ];
