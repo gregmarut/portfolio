@@ -4,9 +4,13 @@
             <app-project-mark [name]="project().name" [icon]="project().icon"/>
             <div class="meta">
                 <span class="year mono">{{ project().year }}</span>
-                <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
-                        project().status
-                    }}</span>
+                <span
+                    class="tag"
+                    [class.tag--ghost]="project().status !== 'Live'"
+                    [class.status--live]="project().status === 'Live'"
+                    [class.status--sunset]="project().status === 'Sunset'"
+                    [class.status--archived]="project().status === 'Archived'"
+                >{{ project().status }}</span>
             </div>
         </div>
         <h3 class="name">{{ project().name }}</h3>
@@ -52,9 +56,13 @@
             <h3 class="name">{{ project().name }}</h3>
             <p class="tagline">{{ project().tagline }}</p>
             <div class="right">
-                <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
-                        project().status
-                    }}</span>
+                <span
+                    class="tag"
+                    [class.tag--ghost]="project().status !== 'Live'"
+                    [class.status--live]="project().status === 'Live'"
+                    [class.status--sunset]="project().status === 'Sunset'"
+                    [class.status--archived]="project().status === 'Archived'"
+                >{{ project().status }}</span>
                 <span class="year mono">{{ project().year }}</span>
                 <svg
                     class="chevron"
