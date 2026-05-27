@@ -1,16 +1,10 @@
 <section id="contact" class="contact">
     <div class="inner">
-        <!-- left -->
         <div class="left">
-            <p class="kicker mono">05 — Contact</p>
-            <h2 class="title">
-                Let's build<br />
-                something <em class="serif">great.</em>
-            </h2>
-            <p class="sub">
-                Open to full-time roles, contract work, and interesting conversations. If you have
-                something worth building, let's talk.
-            </p>
+            <app-section-header num="05" label="Contact"
+                                sub="Open to opportunies, contract work, and interesting conversations. If you have something worth building, let's talk.">
+                Let's build something <em class="serif">great.</em>
+            </app-section-header>
             <a href="mailto:greg.marut@gmail.com" class="btn btn--primary">
                 Send an email
                 <svg
@@ -24,12 +18,10 @@
                     <path
                         d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0 1.1.9 2 2 2z"
                     />
-                    <polyline points="22,6 12,13 2,6" />
+                    <polyline points="22,6 12,13 2,6"/>
                 </svg>
             </a>
         </div>
-
-        <!-- right -->
         <div class="right">
             @for (link of links; track link.label) {
                 <a class="row" [href]="link.href" target="_blank" rel="noopener">
@@ -44,8 +36,8 @@
                         stroke="currentColor"
                         stroke-width="2"
                     >
-                        <line x1="7" y1="17" x2="17" y2="7" />
-                        <polyline points="7 7 17 7 17 17" />
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
                     </svg>
                 </a>
             }

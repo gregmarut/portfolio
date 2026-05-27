@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SectionHeaderComponent } from '../../shared/section-header/section-header.component';
 
 const CONTACT_LINKS = [
     { label: 'Email', key: 'greg.marut@gmail.com', href: 'mailto:greg.marut@gmail.com' },
@@ -9,7 +10,9 @@ const CONTACT_LINKS = [
 @Component({
     selector: 'app-contact',
     standalone: true,
-    imports: [],
+    imports: [
+        SectionHeaderComponent
+    ],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',
 })
