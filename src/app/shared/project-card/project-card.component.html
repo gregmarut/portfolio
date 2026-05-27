@@ -1,29 +1,29 @@
 @if (layout() === 'cards') {
     <div class="pc" [class.pc--expanded]="expanded()" (click)="toggle()">
-        <div class="pc__head">
-            <app-project-mark [name]="project().name" />
-            <div class="pc__meta">
-                <span class="pc__year mono">{{ project().year }}</span>
+        <div class="head">
+            <app-project-mark [name]="project().name"/>
+            <div class="meta">
+                <span class="year mono">{{ project().year }}</span>
                 <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
-                    project().status
-                }}</span>
+                        project().status
+                    }}</span>
             </div>
         </div>
-        <h3 class="pc__name">{{ project().name }}</h3>
-        <p class="pc__tagline">{{ project().tagline }}</p>
+        <h3 class="name">{{ project().name }}</h3>
+        <p class="tagline">{{ project().tagline }}</p>
         @if (expanded()) {
             @for (para of project().desc; track para) {
-                <p class="pc__desc">{{ para }}</p>
+                <p class="desc">{{ para }}</p>
             }
         }
-        <div class="pc__tags">
+        <div class="tags">
             @for (tag of project().tags; track tag) {
                 <span class="tag tag--ghost">{{ tag }}</span>
             }
         </div>
         @if (null !== project().link) {
             <a
-                class="pc__link btn btn--ghost"
+                class="btn btn--ghost"
                 [href]="project().link"
                 target="_blank"
                 rel="noopener"
@@ -38,26 +38,26 @@
                     stroke="currentColor"
                     stroke-width="2"
                 >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
             </a>
         }
     </div>
 } @else {
-    <div class="pl" [class.pl--expanded]="expanded()">
-        <div class="pl__head" (click)="toggle()">
-            <app-project-mark [name]="project().name" />
-            <h3 class="pl__name">{{ project().name }}</h3>
-            <p class="pl__tagline">{{ project().tagline }}</p>
-            <div class="pl__right">
+    <div class="list" [class.list--expanded]="expanded()">
+        <div class="head" (click)="toggle()">
+            <app-project-mark [name]="project().name"/>
+            <h3 class="name">{{ project().name }}</h3>
+            <p class="tagline">{{ project().tagline }}</p>
+            <div class="right">
                 <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
-                    project().status
-                }}</span>
-                <span class="pl__year mono">{{ project().year }}</span>
+                        project().status
+                    }}</span>
+                <span class="year mono">{{ project().year }}</span>
                 <svg
-                    class="pl__chevron"
+                    class="chevron"
                     width="16"
                     height="16"
                     viewBox="0 0 24 24"
@@ -65,16 +65,16 @@
                     stroke="currentColor"
                     stroke-width="2"
                 >
-                    <polyline points="6 9 12 15 18 9" />
+                    <polyline points="6 9 12 15 18 9"/>
                 </svg>
             </div>
         </div>
         @if (expanded()) {
-            <div class="pl__body">
+            <div class="body">
                 @for (para of project().desc; track para) {
-                    <p class="pl__desc">{{ para }}</p>
+                    <p class="desc">{{ para }}</p>
                 }
-                <div class="pl__tags">
+                <div class="tags">
                     @for (tag of project().tags; track tag) {
                         <span class="tag tag--ghost">{{ tag }}</span>
                     }

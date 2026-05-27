@@ -1,5 +1,5 @@
 <section id="stack" class="stack">
-    <div class="stack__inner">
+    <div class="inner">
         <app-section-header
             num="04"
             label="Stack"
@@ -7,13 +7,13 @@
             sub="The technologies I reach for when building production systems."
         />
 
-        <div class="stack__grid">
+        <div class="grid">
             @for (group of groups; track group.group) {
-                <div class="stack__card">
-                    <h3 class="stack__group mono">{{ group.group }}</h3>
-                    <ul class="stack__items">
+                <div class="group">
+                    <h3 class="title mono">{{ group.group }}</h3>
+                    <ul class="items">
                         @for (item of group.items; track item) {
-                            <li class="stack__item">{{ item }}</li>
+                            <li class="item">{{ item }}</li>
                         }
                     </ul>
                 </div>

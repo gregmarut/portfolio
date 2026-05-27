@@ -34,32 +34,32 @@ describe('WorkComponent', () => {
         expect(component.layout()).toBe('list');
     });
 
-    it('should have a work__grid element', () => {
-        const gridElement = debugElement.query(By.css('.work__grid'));
+    it('should have a .grid element', () => {
+        const gridElement = debugElement.query(By.css('.grid'));
         expect(gridElement).toBeTruthy();
     });
 
-    it('should not have work__grid--list class when layout is "cards"', () => {
+    it('should not have grid--list class when layout is "cards"', () => {
         component.layout.set('cards');
         fixture.detectChanges();
-        const gridElement = debugElement.query(By.css('.work__grid'));
-        expect(gridElement.nativeElement.classList.contains('work__grid--list')).toBe(false);
+        const gridElement = debugElement.query(By.css('.grid'));
+        expect(gridElement.nativeElement.classList.contains('grid--list')).toBe(false);
     });
 
-    it('should have work__grid--list class when layout is "list"', () => {
+    it('should have grid--list class when layout is "list"', () => {
         component.layout.set('list');
         fixture.detectChanges();
-        const gridElement = debugElement.query(By.css('.work__grid'));
-        expect(gridElement.nativeElement.classList.contains('work__grid--list')).toBe(true);
+        const gridElement = debugElement.query(By.css('.grid'));
+        expect(gridElement.nativeElement.classList.contains('grid--list')).toBe(true);
     });
 
-    it('should have a work__toolbar element', () => {
-        const toolbarElement = debugElement.query(By.css('.work__toolbar'));
+    it('should have a .toolbar element', () => {
+        const toolbarElement = debugElement.query(By.css('.toolbar'));
         expect(toolbarElement).toBeTruthy();
     });
 
     it('should have both layout toggle buttons', () => {
-        const toggleButtons = debugElement.queryAll(By.css('.work__tog'));
+        const toggleButtons = debugElement.queryAll(By.css('.tog'));
         expect(toggleButtons.length).toBe(2);
     });
 

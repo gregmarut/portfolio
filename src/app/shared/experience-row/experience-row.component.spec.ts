@@ -48,8 +48,8 @@ describe('ExperienceRowComponent', () => {
         expect(row).toBeTruthy();
     });
 
-    it('should render .er__head', () => {
-        const head = hostFixture.debugElement.query(By.css('.er__head'));
+    it('should render .head', () => {
+        const head = hostFixture.debugElement.query(By.css('.head'));
         expect(head).toBeTruthy();
     });
 
@@ -66,27 +66,27 @@ describe('ExperienceRowComponent', () => {
     });
 
     it('should call toggle.emit() when head is clicked', () => {
-        const head = hostFixture.debugElement.query(By.css('.er__head'));
+        const head = hostFixture.debugElement.query(By.css('.head'));
         head.nativeElement.click();
         expect(host.toggleCalled).toBe(true);
     });
 
-    it('should not render .er__body when closed', () => {
-        const body = hostFixture.debugElement.query(By.css('.er__body'));
+    it('should not render .body when closed', () => {
+        const body = hostFixture.debugElement.query(By.css('.body'));
         expect(body).toBeNull();
     });
 
-    it('should render .er__body when open is true', () => {
+    it('should render .body when open is true', () => {
         host.open.set(true);
         hostFixture.detectChanges();
-        const body = hostFixture.debugElement.query(By.css('.er__body'));
+        const body = hostFixture.debugElement.query(By.css('.body'));
         expect(body).toBeTruthy();
     });
 
     it('should render bullet items when open', () => {
         host.open.set(true);
         hostFixture.detectChanges();
-        const bullets = hostFixture.debugElement.queryAll(By.css('.er__bullet'));
+        const bullets = hostFixture.debugElement.queryAll(By.css('.bullet'));
         expect(bullets.length).toBe(mockJob.bullets.length);
     });
 });

@@ -45,10 +45,10 @@ describe('ProjectMarkComponent', () => {
         expect(el).toBeTruthy();
     });
 
-    it('should render initials text inside .pm__initials', () => {
+    it('should render initials text inside .initials', () => {
         fixture.componentRef.setInput('name', 'Double Take');
         fixture.detectChanges();
-        const el = fixture.nativeElement.querySelector('.pm__initials');
+        const el = fixture.nativeElement.querySelector('.initials');
         expect(el?.textContent?.trim()).toBe('DT');
     });
 });

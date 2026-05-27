@@ -24,8 +24,8 @@ describe('AboutComponent', () => {
         expect(section).toBeTruthy();
     });
 
-    it('should have .about__p--lead paragraph', () => {
-        const leadPara = fixture.nativeElement.querySelector('.about__p--lead');
+    it('should have .para--lead paragraph', () => {
+        const leadPara = fixture.nativeElement.querySelector('.para--lead');
         expect(leadPara).toBeTruthy();
     });
 
@@ -35,12 +35,12 @@ describe('AboutComponent', () => {
     });
 
     it('should have 4 principle items in list', () => {
-        const principles = fixture.nativeElement.querySelectorAll('.about__principles li');
+        const principles = fixture.nativeElement.querySelectorAll('.principles li');
         expect(principles.length).toBe(4);
     });
 
     it('should have 3 spec card rows', () => {
-        const specRows = fixture.nativeElement.querySelectorAll('.about__spec-row');
+        const specRows = fixture.nativeElement.querySelectorAll('.spec .row');
         expect(specRows.length).toBe(3);
     });
 

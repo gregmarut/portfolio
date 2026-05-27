@@ -3,7 +3,7 @@
 .sh {
     margin-bottom: 48px;
 
-    &__kicker {
+    .kicker {
         font-size: 11px;
         color: var(--muted);
         letter-spacing: 0.08em;
@@ -11,11 +11,11 @@
         margin-bottom: 12px;
     }
 
-    &__num {
+    .num {
         color: var(--accent);
     }
 
-    &__title {
+    .title {
         font-size: clamp(28px, 4vw, 46px);
         font-weight: 600;
         line-height: 1.05;
@@ -24,7 +24,7 @@
         margin-bottom: 14px;
     }
 
-    &__sub {
+    .sub {
         font-size: 16px;
         color: var(--text-2);
         max-width: 560px;

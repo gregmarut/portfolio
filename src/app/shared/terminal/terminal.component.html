@@ -1,49 +1,49 @@
 <div class="term mono" aria-hidden="true">
-    <div class="term__bar">
-        <span class="term__dot term__dot--red"></span>
-        <span class="term__dot term__dot--yellow"></span>
-        <span class="term__dot term__dot--green"></span>
+    <div class="bar">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
     </div>
-    <div class="term__body">
-        <!-- Static prior-session lines -->
-        <div class="term__line">
-            <span class="term__prompt">$</span>
-            <span class="term__cmd">whoami</span>
+    <div class="body">
+        <!-- static prior-session lines -->
+        <div class="line">
+            <span class="prompt">$</span>
+            <span class="cmd">whoami</span>
         </div>
-        <div class="term__line term__line--out">
-            <span class="term__out">&gt; greg marut — software engineer</span>
+        <div class="line line--out">
+            <span class="out">&gt; greg marut — software engineer</span>
         </div>
-        <div class="term__line">
-            <span class="term__prompt">$</span>
-            <span class="term__cmd">cat skills.txt</span>
+        <div class="line">
+            <span class="prompt">$</span>
+            <span class="cmd">cat skills.txt</span>
         </div>
-        <div class="term__line term__line--out">
-            <span class="term__out"
+        <div class="line line--out">
+            <span class="out"
                 >&gt; java · typescript · angular · aws · react · rust · wasm · sql · cypher · docker</span
             >
         </div>
-        <div class="term__line">
-            <span class="term__prompt">$</span>
-            <span class="term__cmd">git log --oneline -3</span>
+        <div class="line">
+            <span class="prompt">$</span>
+            <span class="cmd">git log --oneline -3</span>
         </div>
-        <div class="term__line term__line--out">
-            <span class="term__out">&gt; a4f2c1e feat: enforce message ttl on session expiry</span>
+        <div class="line line--out">
+            <span class="out">&gt; a4f2c1e feat: enforce message ttl on session expiry</span>
         </div>
-        <div class="term__line term__line--out">
-            <span class="term__out">&gt; 3bc9d0a feat: link awards to sbom component vendors</span>
+        <div class="line line--out">
+            <span class="out">&gt; 3bc9d0a feat: link awards to sbom component vendors</span>
         </div>
-        <div class="term__line term__line--out">
-            <span class="term__out">&gt; 7e1a8f2 feat: social feed with likes and comments</span>
+        <div class="line line--out">
+            <span class="out">&gt; 7e1a8f2 feat: social feed with likes and comments</span>
         </div>
-        <!-- Active animated line -->
-        <div class="term__line">
-            <span class="term__prompt">$</span>
-            <span class="term__cmd">{{ typed() }}</span
-            ><span class="term__cursor"></span>
+        <!-- active animated line -->
+        <div class="line">
+            <span class="prompt">$</span>
+            <span class="cmd">{{ typed() }}</span
+            ><span class="cursor"></span>
         </div>
         @if (phase() === 'output' || phase() === 'pause') {
-            <div class="term__line term__line--out">
-                <span class="term__out">&gt; {{ currentLine().out }}</span>
+            <div class="line line--out">
+                <span class="out">&gt; {{ currentLine().out }}</span>
             </div>
         }
     </div>

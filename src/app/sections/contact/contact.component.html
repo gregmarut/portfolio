@@ -1,13 +1,13 @@
 <section id="contact" class="contact">
-    <div class="contact__inner">
-        <!-- Left -->
-        <div class="contact__left">
-            <p class="contact__kicker mono">05 — Contact</p>
-            <h2 class="contact__title">
+    <div class="inner">
+        <!-- left -->
+        <div class="left">
+            <p class="kicker mono">05 — Contact</p>
+            <h2 class="title">
                 Let's build<br />
                 something <em class="serif">great.</em>
             </h2>
-            <p class="contact__sub">
+            <p class="sub">
                 Open to full-time roles, contract work, and interesting conversations. If you have
                 something worth building, let's talk.
             </p>
@@ -29,14 +29,14 @@
             </a>
         </div>
 
-        <!-- Right -->
-        <div class="contact__right">
+        <!-- right -->
+        <div class="right">
             @for (link of links; track link.label) {
-                <a class="contact__row" [href]="link.href" target="_blank" rel="noopener">
-                    <span class="contact__row-label mono">{{ link.label }}</span>
-                    <span class="contact__row-val">{{ link.key }}</span>
+                <a class="row" [href]="link.href" target="_blank" rel="noopener">
+                    <span class="label mono">{{ link.label }}</span>
+                    <span class="val">{{ link.key }}</span>
                     <svg
-                        class="contact__row-arrow"
+                        class="arrow"
                         width="16"
                         height="16"
                         viewBox="0 0 24 24"

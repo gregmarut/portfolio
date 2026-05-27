@@ -3,7 +3,7 @@
 .contact {
     padding: clamp(80px, 10vw, 120px) var(--gutter);
 
-    &__inner {
+    .inner {
         max-width: var(--maxw);
         margin: 0 auto;
         display: grid;
@@ -16,7 +16,7 @@
         }
     }
 
-    &__kicker {
+    .kicker {
         font-size: 11px;
         color: var(--muted);
         letter-spacing: 0.08em;
@@ -24,7 +24,7 @@
         margin-bottom: 16px;
     }
 
-    &__title {
+    .title {
         font-size: clamp(32px, 4.5vw, 54px);
         font-weight: 600;
         line-height: 1.1;
@@ -38,7 +38,7 @@
         }
     }
 
-    &__sub {
+    .sub {
         font-size: 15px;
         color: var(--text-2);
         line-height: 1.7;
@@ -46,7 +46,7 @@
         margin-bottom: 32px;
     }
 
-    &__right {
+    .right {
         display: flex;
         flex-direction: column;
         gap: 0;
@@ -55,7 +55,7 @@
         overflow: hidden;
     }
 
-    &__row {
+    .row {
         display: flex;
         align-items: center;
         gap: 16px;
@@ -76,17 +76,17 @@
             border-color: var(--accent);
             transform: translateX(4px);
 
-            .contact__row-val {
+            .val {
                 color: var(--accent);
             }
 
-            .contact__row-arrow {
+            .arrow {
                 color: var(--accent);
             }
         }
     }
 
-    &__row-label {
+    .label {
         font-size: 11px;
         color: var(--muted);
         text-transform: uppercase;
@@ -95,14 +95,14 @@
         flex-shrink: 0;
     }
 
-    &__row-val {
+    .val {
         font-size: 13px;
         color: var(--text-2);
         flex: 1;
         transition: color 0.15s;
     }
 
-    &__row-arrow {
+    .arrow {
         color: var(--muted);
         flex-shrink: 0;
         transition: color 0.15s;

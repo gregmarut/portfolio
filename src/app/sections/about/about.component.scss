@@ -3,12 +3,12 @@
 .about {
     padding: clamp(80px, 10vw, 120px) var(--gutter);
 
-    &__inner {
+    .inner {
         max-width: var(--maxw);
         margin: 0 auto;
     }
 
-    &__grid {
+    .grid {
         display: grid;
         grid-template-columns: 1.4fr 1fr;
         gap: clamp(40px, 6vw, 80px);
@@ -19,13 +19,13 @@
         }
     }
 
-    &__bio {
+    .bio {
         display: flex;
         flex-direction: column;
         gap: 18px;
     }
 
-    &__p {
+    .para {
         font-size: 15px;
         color: var(--text-2);
         line-height: 1.75;
@@ -37,13 +37,13 @@
         }
     }
 
-    &__cards {
+    .cards {
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
 
-    &__principles {
+    .principles {
         list-style: decimal;
         padding-left: 18px;
         margin: 0;
@@ -68,28 +68,28 @@
         }
     }
 
-    &__spec {
+    .spec {
         display: flex;
         flex-direction: column;
         gap: 10px;
-    }
 
-    &__spec-row {
-        display: flex;
-        gap: 12px;
-        font-size: 13px;
-        align-items: baseline;
-    }
+        .row {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            align-items: baseline;
+        }
 
-    &__spec-key {
-        color: var(--muted);
-        font-size: 11px;
-        min-width: 80px;
-        flex-shrink: 0;
-    }
+        .key {
+            color: var(--muted);
+            font-size: 11px;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
 
-    &__spec-val {
-        color: var(--text-2);
+        .val {
+            color: var(--text-2);
+        }
     }
 }
 

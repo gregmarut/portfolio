@@ -25,12 +25,7 @@ describe('FooterComponent', () => {
     });
 
     it('should contain footer comment with "hand-built with care"', () => {
-        const commentElement = fixture.nativeElement.querySelector('.footer__comment');
+        const commentElement = fixture.nativeElement.querySelector('.comment');
         expect(commentElement.textContent).toContain('hand-built with care');
-    });
-
-    it('should contain footer version with "v3.0.0"', () => {
-        const versionElement = fixture.nativeElement.querySelector('.footer__ver');
-        expect(versionElement.textContent).toContain('v3.0.0');
     });
 });

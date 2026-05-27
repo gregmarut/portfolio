@@ -22,54 +22,54 @@ describe('SectionHeaderComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should render num inside .sh__num', () => {
+    it('should render num inside .num', () => {
         fixture.componentRef.setInput('num', '01');
         fixture.componentRef.setInput('label', 'About');
         fixture.componentRef.setInput('title', 'About Me');
         fixture.detectChanges();
 
-        const numElement = fixture.nativeElement.querySelector('.sh__num');
+        const numElement = fixture.nativeElement.querySelector('.num');
         expect(numElement?.textContent).toBe('01');
     });
 
-    it('should render label in .sh__kicker', () => {
+    it('should render label in .kicker', () => {
         fixture.componentRef.setInput('num', '01');
         fixture.componentRef.setInput('label', 'About');
         fixture.componentRef.setInput('title', 'About Me');
         fixture.detectChanges();
 
-        const kickerElement = fixture.nativeElement.querySelector('.sh__kicker');
+        const kickerElement = fixture.nativeElement.querySelector('.kicker');
         expect(kickerElement?.textContent).toContain('About');
     });
 
-    it('should render title in .sh__title', () => {
+    it('should render title in .title', () => {
         fixture.componentRef.setInput('num', '01');
         fixture.componentRef.setInput('label', 'About');
         fixture.componentRef.setInput('title', 'About Me');
         fixture.detectChanges();
 
-        const titleElement = fixture.nativeElement.querySelector('.sh__title');
+        const titleElement = fixture.nativeElement.querySelector('.title');
         expect(titleElement?.textContent).toBe('About Me');
     });
 
-    it('should render subtitle in .sh__sub when provided', () => {
+    it('should render subtitle in .sub when provided', () => {
         fixture.componentRef.setInput('num', '01');
         fixture.componentRef.setInput('label', 'About');
         fixture.componentRef.setInput('title', 'About Me');
         fixture.componentRef.setInput('sub', 'This is a subtitle');
         fixture.detectChanges();
 
-        const subElement = fixture.nativeElement.querySelector('.sh__sub');
+        const subElement = fixture.nativeElement.querySelector('.sub');
         expect(subElement?.textContent).toBe('This is a subtitle');
     });
 
-    it('should not render .sh__sub element when sub is empty (default)', () => {
+    it('should not render .sub element when sub is empty (default)', () => {
         fixture.componentRef.setInput('num', '01');
         fixture.componentRef.setInput('label', 'About');
         fixture.componentRef.setInput('title', 'About Me');
         fixture.detectChanges();
 
-        const subElement = fixture.nativeElement.querySelector('.sh__sub');
+        const subElement = fixture.nativeElement.querySelector('.sub');
         expect(subElement).toBeNull();
     });
 });

@@ -30,14 +30,14 @@ describe('HeroComponent', () => {
         expect(component.marqueeItems.length).toBeGreaterThan(0);
     });
 
-    it('should render .hero__h1', () => {
+    it('should render .heading', () => {
         const el: HTMLElement = fixture.nativeElement;
-        expect(el.querySelector('.hero__h1')).toBeTruthy();
+        expect(el.querySelector('.heading')).toBeTruthy();
     });
 
-    it('should render .hero__meta with name and title', () => {
+    it('should render .meta with name and title', () => {
         const el: HTMLElement = fixture.nativeElement;
-        const meta = el.querySelector('.hero__meta');
+        const meta = el.querySelector('.meta');
         expect(meta).toBeTruthy();
         expect(meta!.textContent).toContain('Greg Marut');
     });

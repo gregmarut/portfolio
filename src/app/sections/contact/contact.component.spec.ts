@@ -29,13 +29,13 @@ describe('ContactComponent', () => {
         expect(section).toBeTruthy();
     });
 
-    it('should render the title with contact__title class', () => {
-        const title = fixture.nativeElement.querySelector('.contact__title');
+    it('should render the title', () => {
+        const title = fixture.nativeElement.querySelector('.title');
         expect(title).toBeTruthy();
     });
 
-    it('should render 4 contact__row elements', () => {
-        const rows = fixture.nativeElement.querySelectorAll('.contact__row');
+    it('should render 4 link rows', () => {
+        const rows = fixture.nativeElement.querySelectorAll('.row');
         expect(rows.length).toBe(4);
     });
 

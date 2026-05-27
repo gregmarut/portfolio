@@ -69,29 +69,29 @@ describe('ProjectCardComponent', () => {
         expect(el).toBeTruthy();
     });
 
-    it('should render .pl in list layout', () => {
+    it('should render .list in list layout', () => {
         fixture.componentRef.setInput('project', mockProject);
         fixture.componentRef.setInput('layout', 'list');
         fixture.detectChanges();
-        const el = fixture.nativeElement.querySelector('.pl');
+        const el = fixture.nativeElement.querySelector('.list');
         expect(el).toBeTruthy();
     });
 
-    it('should show .pc__desc when expanded in cards layout', () => {
+    it('should show .desc when expanded in cards layout', () => {
         fixture.componentRef.setInput('project', mockProject);
         fixture.componentRef.setInput('layout', 'cards');
         fixture.detectChanges();
         component.toggle();
         fixture.detectChanges();
-        const el = fixture.nativeElement.querySelector('.pc__desc');
+        const el = fixture.nativeElement.querySelector('.desc');
         expect(el).toBeTruthy();
     });
 
-    it('should not render .pc__desc when not expanded', () => {
+    it('should not render .desc when not expanded', () => {
         fixture.componentRef.setInput('project', mockProject);
         fixture.componentRef.setInput('layout', 'cards');
         fixture.detectChanges();
-        const el = fixture.nativeElement.querySelector('.pc__desc');
+        const el = fixture.nativeElement.querySelector('.desc');
         expect(el).toBeNull();
     });
 
@@ -99,7 +99,7 @@ describe('ProjectCardComponent', () => {
         fixture.componentRef.setInput('project', mockProject);
         fixture.componentRef.setInput('layout', 'cards');
         fixture.detectChanges();
-        const el = fixture.nativeElement.querySelector('.pc__name');
+        const el = fixture.nativeElement.querySelector('.name');
         expect(el?.textContent?.trim()).toBe('Joust');
     });
 });

@@ -1,8 +1,8 @@
 <section id="experience" class="exp">
-    <div class="exp__inner">
+    <div class="inner">
         <app-section-header num="03" label="Experience" title="Where I've worked." />
 
-        <div class="exp__list">
+        <div class="list">
             @for (job of jobs; track job.company; let i = $index) {
                 <app-experience-row [job]="job" [open]="openIndex() === i" (toggle)="toggle(i)" />
             }

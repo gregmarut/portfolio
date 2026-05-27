@@ -1,13 +1,13 @@
 <section id="work" class="work">
-    <div class="work__inner">
+    <div class="inner">
         <app-section-header num="02" label="Work" title="Selected projects." />
 
-        <div class="work__toolbar">
-            <span class="work__count mono">{{ projects.length }} projects</span>
-            <div class="work__toggle" role="group" aria-label="Layout toggle">
+        <div class="toolbar">
+            <span class="count mono">{{ projects.length }} projects</span>
+            <div class="toggle" role="group" aria-label="Layout toggle">
                 <button
-                    class="work__tog"
-                    [class.work__tog--active]="layout() === 'cards'"
+                    class="tog"
+                    [class.tog--active]="layout() === 'cards'"
                     (click)="layout.set('cards')"
                     aria-label="Grid view"
                 >
@@ -20,8 +20,8 @@
                     Cards
                 </button>
                 <button
-                    class="work__tog"
-                    [class.work__tog--active]="layout() === 'list'"
+                    class="tog"
+                    [class.tog--active]="layout() === 'list'"
                     (click)="layout.set('list')"
                     aria-label="List view"
                 >
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="work__grid" [class.work__grid--list]="layout() === 'list'">
+        <div class="grid" [class.grid--list]="layout() === 'list'">
             @for (project of projects; track project.name) {
                 <app-project-card [project]="project" [layout]="layout()" />
             }

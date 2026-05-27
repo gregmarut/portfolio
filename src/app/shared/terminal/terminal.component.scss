@@ -7,7 +7,7 @@
     overflow: hidden;
     font-size: 13px;
 
-    &__bar {
+    .bar {
         display: flex;
         gap: 6px;
         align-items: center;
@@ -16,7 +16,7 @@
         border-bottom: 1px solid var(--line-soft);
     }
 
-    &__dot {
+    .dot {
         width: 11px;
         height: 11px;
         border-radius: 50%;
@@ -32,14 +32,14 @@
         }
     }
 
-    &__body {
+    .body {
         padding: 18px 20px;
         display: flex;
         flex-direction: column;
         gap: 3px;
     }
 
-    &__line {
+    .line {
         display: flex;
         align-items: baseline;
         gap: 7px;
@@ -50,22 +50,22 @@
         }
     }
 
-    &__prompt {
+    .prompt {
         color: var(--accent);
         font-weight: 600;
         flex-shrink: 0;
     }
 
-    &__cmd {
+    .cmd {
         color: var(--text);
     }
 
-    &__out {
+    .out {
         color: var(--text-2);
         word-break: break-word;
     }
 
-    &__cursor {
+    .cursor {
         display: inline-block;
         width: 8px;
         height: 14px;

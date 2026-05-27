@@ -4,7 +4,7 @@
     padding: clamp(100px, 14vw, 160px) var(--gutter) 0;
     position: relative;
 
-    &__inner {
+    .inner {
         max-width: var(--maxw);
         margin: 0 auto;
         display: grid;
@@ -17,7 +17,7 @@
         }
     }
 
-    &__meta {
+    .meta {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -30,7 +30,7 @@
         margin-bottom: 24px;
     }
 
-    &__h1 {
+    .heading {
         font-size: clamp(38px, 6.4vw, 78px);
         font-weight: 600;
         line-height: 1.02;
@@ -44,7 +44,7 @@
         }
     }
 
-    &__lede {
+    .lede {
         font-size: clamp(15px, 1.5vw, 17px);
         color: var(--text-2);
         line-height: 1.65;
@@ -52,14 +52,14 @@
         margin-bottom: 28px;
     }
 
-    &__ctas {
+    .ctas {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
 
-    &__stats {
+    .stats {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
@@ -71,34 +71,34 @@
         }
     }
 
-    &__stat {
+    .stat {
         display: flex;
         flex-direction: column;
         gap: 4px;
+
+        .val {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        .label {
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
     }
 
-    &__stat-val {
-        font-size: 22px;
-        font-weight: 600;
-        color: var(--text);
-        letter-spacing: -0.02em;
-    }
-
-    &__stat-label {
-        font-size: 11px;
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-    }
-
-    &__right {
+    .right {
         @media (max-width: 960px) {
             display: none;
         }
     }
 
     //marquee
-    &__marq {
+    .marq {
         margin-top: clamp(48px, 8vw, 80px);
         overflow: hidden;
         -webkit-mask-image: linear-gradient(
@@ -112,27 +112,27 @@
         border-top: 1px solid var(--line-soft);
         border-bottom: 1px solid var(--line-soft);
         padding: 14px 0;
-    }
 
-    &__marq-track {
-        display: flex;
-        gap: 0;
-        width: max-content;
-        animation: marq 38s linear infinite;
-    }
+        .track {
+            display: flex;
+            gap: 0;
+            width: max-content;
+            animation: marq 38s linear infinite;
+        }
 
-    &__marq-item {
-        padding: 0 28px;
-        font-size: 12px;
-        color: var(--muted);
-        letter-spacing: 0.06em;
-        white-space: nowrap;
+        .item {
+            padding: 0 28px;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+            white-space: nowrap;
 
-        &::after {
-            content: '·';
-            margin-left: 28px;
-            color: var(--accent);
-            opacity: 0.4;
+            &::after {
+                content: '·';
+                margin-left: 28px;
+                color: var(--accent);
+                opacity: 0.4;
+            }
         }
     }
 }

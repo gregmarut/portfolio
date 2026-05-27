@@ -30,22 +30,22 @@ describe('StackComponent', () => {
         expect(section).toBeTruthy();
     });
 
-    it('should render .stack__grid element', () => {
-        const grid = fixture.nativeElement.querySelector('.stack__grid');
+    it('should render .grid element', () => {
+        const grid = fixture.nativeElement.querySelector('.grid');
         expect(grid).toBeTruthy();
     });
 
-    it('should render .stack__card elements for each group', () => {
-        const cards = fixture.nativeElement.querySelectorAll('.stack__card');
-        expect(cards.length).toBe(5);
-        expect(cards.length).toBe(component.groups.length);
+    it('should render .group elements for each group', () => {
+        const groups = fixture.nativeElement.querySelectorAll('.group');
+        expect(groups.length).toBe(5);
+        expect(groups.length).toBe(component.groups.length);
     });
 
-    it('should render .stack__group elements with group names', () => {
-        const groupElements = fixture.nativeElement.querySelectorAll('.stack__group');
-        expect(groupElements.length).toBe(5);
+    it('should render .title elements with group names', () => {
+        const titleElements = fixture.nativeElement.querySelectorAll('.group .title');
+        expect(titleElements.length).toBe(5);
 
-        groupElements.forEach((element: HTMLElement, index: number) => {
+        titleElements.forEach((element: HTMLElement, index: number) => {
             expect(element.textContent).toContain(component.groups[index].group);
         });
     });

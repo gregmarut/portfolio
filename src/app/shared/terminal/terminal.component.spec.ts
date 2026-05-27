@@ -42,25 +42,25 @@ describe('TerminalComponent', () => {
     });
 
     it('should render the cursor element', () => {
-        const cursor = fixture.nativeElement.querySelector('.term__cursor');
+        const cursor = fixture.nativeElement.querySelector('.cursor');
         expect(cursor).toBeTruthy();
     });
 
     it('should render static prior-session prompt elements', () => {
-        const prompts = fixture.nativeElement.querySelectorAll('.term__prompt');
+        const prompts = fixture.nativeElement.querySelectorAll('.prompt');
         //there should be at least one prompt from the static lines plus the active line
         expect(prompts.length).toBeGreaterThan(1);
     });
 
     it('should render static whoami line', () => {
-        const cmds = fixture.nativeElement.querySelectorAll('.term__cmd');
+        const cmds = fixture.nativeElement.querySelectorAll('.cmd');
         const texts = Array.from(cmds).map((el: any) => el.textContent.trim());
         expect(texts).toContain('whoami');
     });
 
     it('should not show output line when phase is typing', () => {
         //phase starts as 'typing' so output should not be visible
-        const outLines = fixture.nativeElement.querySelectorAll('.term__line--out');
+        const outLines = fixture.nativeElement.querySelectorAll('.line--out');
         //only static out lines should be present (8 static ones), not the animated one
         //we check by counting — animated output line should not be present
         const allOutTexts = Array.from(outLines).map((el: any) => el.textContent);
@@ -72,7 +72,7 @@ describe('TerminalComponent', () => {
         component.phase.set('output');
         fixture.detectChanges();
 
-        const outLines = fixture.nativeElement.querySelectorAll('.term__line--out');
+        const outLines = fixture.nativeElement.querySelectorAll('.line--out');
         const allOutTexts = Array.from(outLines).map((el: any) => el.textContent);
         const hasAnimatedOut = allOutTexts.some((t: string) => t.includes(TERM_LINES[0].out));
         expect(hasAnimatedOut).toBe(true);
@@ -82,7 +82,7 @@ describe('TerminalComponent', () => {
         component.phase.set('pause');
         fixture.detectChanges();
 
-        const outLines = fixture.nativeElement.querySelectorAll('.term__line--out');
+        const outLines = fixture.nativeElement.querySelectorAll('.line--out');
         const allOutTexts = Array.from(outLines).map((el: any) => el.textContent);
         const hasAnimatedOut = allOutTexts.some((t: string) => t.includes(TERM_LINES[0].out));
         expect(hasAnimatedOut).toBe(true);
@@ -95,7 +95,7 @@ describe('TerminalComponent', () => {
         component.phase.set('typing');
         fixture.detectChanges();
 
-        const outLines = fixture.nativeElement.querySelectorAll('.term__line--out');
+        const outLines = fixture.nativeElement.querySelectorAll('.line--out');
         const allOutTexts = Array.from(outLines).map((el: any) => el.textContent);
         const hasAnimatedOut = allOutTexts.some((t: string) => t.includes(TERM_LINES[0].out));
         expect(hasAnimatedOut).toBe(false);
@@ -110,8 +110,8 @@ describe('TerminalComponent', () => {
         component.typed.set('ls pro');
         fixture.detectChanges();
 
-        //the last .term__cmd is the active one
-        const cmds = fixture.nativeElement.querySelectorAll('.term__cmd');
+        //the last .cmd is the active one
+        const cmds = fixture.nativeElement.querySelectorAll('.cmd');
         const lastCmd = cmds[cmds.length - 1];
         expect(lastCmd.textContent).toBe('ls pro');
     });
