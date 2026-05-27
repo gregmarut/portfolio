@@ -7,6 +7,7 @@ export interface Project {
     desc: string[];
     tags: string[];
     link: string | null;
+    icon?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -22,6 +23,7 @@ export const PROJECTS: Project[] = [
         ],
         tags: [ 'Generative AI', 'Java', 'Spring Boot', 'Angular', 'WebSockets', 'AWS' ],
         link: 'https://www.tunescript.ai',
+        icon: 'icon-tunescript.png',
     },
     {
         name: 'OrbWeaver',
@@ -35,6 +37,7 @@ export const PROJECTS: Project[] = [
         ],
         tags: [ 'Neo4J', 'Java', 'Spring Boot', 'Angular', 'Mongo DB', 'AWS' ],
         link: 'https://orbweaver.radialthread.com',
+        icon: 'icon-orbweaver.png',
     },
     {
         name: 'Joust',
@@ -59,6 +62,7 @@ export const PROJECTS: Project[] = [
             'AWS',
         ],
         link: 'https://www.joustip.com',
+        icon: 'icon-joust.png',
     },
     {
         name: 'Surfr',
@@ -72,6 +76,7 @@ export const PROJECTS: Project[] = [
         ],
         tags: [ 'MQTT', 'Java', 'Spring Boot', 'Angular', 'Android', 'iOS', 'AWS' ],
         link: null,
+        icon: 'icon-surfr.png',
     },
     {
         name: 'Double Take',
@@ -85,6 +90,7 @@ export const PROJECTS: Project[] = [
         ],
         tags: [ 'Java', 'Spring', 'Hibernate', 'Android', 'REST', 'AWS' ],
         link: null,
+        icon: 'icon-doubletake.png',
     },
     {
         name: 'TalkStreamLive',
@@ -98,5 +104,6 @@ export const PROJECTS: Project[] = [
         ],
         tags: [ 'Spring MVC', 'Hibernate', 'MySQL', 'iOS', 'Android', 'AWS' ],
         link: 'https://www.talkstreamlive.com',
+        icon: 'icon-tsl.png',
     },
 ];

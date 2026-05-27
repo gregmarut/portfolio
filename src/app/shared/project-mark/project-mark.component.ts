@@ -8,6 +8,7 @@ import { Component, computed, input } from '@angular/core';
 })
 export class ProjectMarkComponent {
     name = input.required<string>();
+    icon = input<string>();
 
     initials = computed(() => {
         const parts = this.name().split(' ');

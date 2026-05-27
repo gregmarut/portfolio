@@ -1,7 +1,7 @@
 @if (layout() === 'cards') {
     <div class="pc" [class.pc--expanded]="expanded()" (click)="toggle()">
         <div class="head">
-            <app-project-mark [name]="project().name"/>
+            <app-project-mark [name]="project().name" [icon]="project().icon"/>
             <div class="meta">
                 <span class="year mono">{{ project().year }}</span>
                 <span class="tag" [class.tag--ghost]="project().status !== 'Live'">{{
@@ -48,7 +48,7 @@
 } @else {
     <div class="list" [class.list--expanded]="expanded()">
         <div class="head" (click)="toggle()">
-            <app-project-mark [name]="project().name"/>
+            <app-project-mark [name]="project().name" [icon]="project().icon"/>
             <h3 class="name">{{ project().name }}</h3>
             <p class="tagline">{{ project().tagline }}</p>
             <div class="right">
