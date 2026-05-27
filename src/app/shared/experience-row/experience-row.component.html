@@ -10,7 +10,7 @@
         <div class="right">
             <div class="tags">
                 @for (tag of job().tags.slice(0, 3); track tag) {
-                    <span class="tag tag--ghost">{{ tag }}</span>
+                    <span class="tag">{{ tag }}</span>
                 }
             </div>
             <svg
@@ -36,7 +36,7 @@
             </ul>
             <div class="all-tags">
                 @for (tag of job().tags; track tag) {
-                    <span class="tag tag--ghost">{{ tag }}</span>
+                    <span class="tag">{{ tag }}</span>
                 }
             </div>
         </div>
