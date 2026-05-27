@@ -20,8 +20,8 @@ describe('ContactComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should have 4 links', () => {
-        expect(component.links.length).toBe(4);
+    it('should have 3 links', () => {
+        expect(component.links.length).toBe(3);
     });
 
     it('should have a #contact section', () => {
@@ -34,9 +34,9 @@ describe('ContactComponent', () => {
         expect(title).toBeTruthy();
     });
 
-    it('should render 4 link rows', () => {
+    it('should render 3 link rows', () => {
         const rows = fixture.nativeElement.querySelectorAll('.row');
-        expect(rows.length).toBe(4);
+        expect(rows.length).toBe(3);
     });
 
     it('should have email link with correct href', () => {

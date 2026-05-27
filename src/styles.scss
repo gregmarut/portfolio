@@ -42,6 +42,11 @@ body {
     letter-spacing: -0.01em;
 }
 
+// ── Section header ────────────────────────────────────────────
+.sh .title em {
+    color: var(--accent);
+}
+
 // ── Global shared components ──────────────────────────────────
 .status-dot {
     display: inline-block;

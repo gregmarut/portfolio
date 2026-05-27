@@ -1,6 +1,12 @@
 <section id="experience" class="exp">
     <div class="inner">
-        <app-section-header num="03" label="Experience" title="Where I've worked." />
+        <app-section-header
+            num="03"
+            label="Experience"
+            sub="Cybersecurity, federal, consulting, and founding — shipped under real constraints."
+        >
+            Where I've <em class="serif">worked</em>.
+        </app-section-header>
 
         <div class="list">
             @for (job of jobs; track job.company; let i = $index) {

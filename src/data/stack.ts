@@ -4,7 +4,7 @@ export interface StackGroup {
 }
 
 export const STACK: StackGroup[] = [
-    { group: 'Languages', items: [ 'Java 21', 'TypeScript', 'Rust', 'SQL', 'WASM' ] },
+    { group: 'Languages', items: [ 'Java', 'TypeScript', 'Rust', 'SQL', 'WASM' ] },
     {
         group: 'Backend',
         items: [
@@ -17,7 +17,7 @@ export const STACK: StackGroup[] = [
             'WebSockets'
         ],
     },
-    { group: 'Frontend', items: [ 'Angular 20', 'React Native', 'STOMP' ] },
+    { group: 'Frontend', items: [ 'Angular', 'React Native', 'STOMP' ] },
     { group: 'Data', items: [ 'MariaDB', 'MySQL', 'MongoDB', 'Neo4J', 'Redis', 'Elastic Search' ] },
     {
         group: 'Infra',

@@ -4,15 +4,29 @@
     margin-bottom: 48px;
 
     .kicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         font-size: 11px;
         color: var(--muted);
         letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .num {
         color: var(--accent);
+        flex-shrink: 0;
+    }
+
+    .rule {
+        height: 1px;
+        width: 40px;
+        background: var(--line);
+        flex-shrink: 0;
+    }
+
+    .label {
+        color: var(--muted);
     }
 
     .title {
