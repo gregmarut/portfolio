@@ -9,24 +9,27 @@ const STATS = [
 ];
 
 const MARQUEE_ITEMS = [
-    'TypeScript',
     'Java',
-    'Angular',
-    'React',
-    'Go',
-    'AWS',
-    'Kubernetes',
-    'PostgreSQL',
-    'Docker',
     'Spring Boot',
-    'Node.js',
-    'Terraform',
+    'Angular',
+    'TypeScript',
+    'React Native',
+    'AWS',
+    'PostgreSQL',
+    'MariaDB',
+    'Redis',
+    'MongoDB',
+    'RabbitMQ',
+    'Neo4J',
+    'Docker',
+    'Rust',
+    'WASM',
 ];
 
 @Component({
     selector: 'app-hero',
     standalone: true,
-    imports: [TerminalComponent],
+    imports: [ TerminalComponent ],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.scss',
 })

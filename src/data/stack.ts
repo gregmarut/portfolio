@@ -25,7 +25,8 @@ export const STACK: StackGroup[] = [
             'AWS',
             'Docker',
             'Jenkins',
-            'NGINX'
+            'NGINX',
+            'Linux'
         ],
     },
 ];

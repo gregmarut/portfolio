@@ -4,7 +4,6 @@ const CONTACT_LINKS = [
     { label: 'Email', key: 'greg.marut@gmail.com', href: 'mailto:greg.marut@gmail.com' },
     { label: 'LinkedIn', key: '/in/greg-marut-73541612', href: 'https://linkedin.com/in/greg-marut-73541612' },
     { label: 'GitHub', key: 'gregmarut', href: 'https://github.com/gregmarut' },
-    { label: 'Joust', key: 'joustip.com', href: 'https://www.joustip.com' },
 ];
 
 @Component({
