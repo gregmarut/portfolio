@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
             'Open the app, pick a genre, ride an endless waterfall of new music — tap any track to connect straight into the source stream. Loved by users; monetization never caught up. Wound down 2021.',
         ],
         tags: [ 'MQTT', 'Java', 'Spring Boot', 'Angular', 'Android', 'iOS', 'AWS' ],
-        link: null,
+        link: 'surfr.pdf',
         icon: 'icon-surfr.png',
     },
     {
