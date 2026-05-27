@@ -245,3 +245,7 @@ main {
 section[id] {
     scroll-margin-top: 72px;
 }
+
+.page-section {
+    padding: clamp(80px, 10vw, 120px) var(--gutter) 10px var(--gutter);
+}

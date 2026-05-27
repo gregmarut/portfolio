@@ -1,8 +1,6 @@
 @use 'styles/tokens';
 
 .exp {
-    padding: clamp(80px, 10vw, 120px) var(--gutter);
-
     .inner {
         max-width: var(--maxw);
         margin: 0 auto;
