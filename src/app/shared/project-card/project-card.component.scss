@@ -8,10 +8,10 @@
     padding: 22px;
     cursor: pointer;
     position: relative;
-    transition:
-        border-color 0.18s,
-        transform 0.18s;
+    transition: border-color 0.18s,
+    transform 0.18s;
     overflow: hidden;
+    min-height: 295px;
 
     &::before {
         content: '';

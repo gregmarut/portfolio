@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
             "Built from the ground up to handle streaming generation with low enough latency that the music feels like it's responding to you, because it is.",
         ],
         tags: [ 'Generative AI', 'Java', 'Spring Boot', 'Angular', 'WebSockets', 'AWS' ],
-        link: null,
+        link: 'https://www.tunescript.ai',
     },
     {
         name: 'OrbWeaver',
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
             "Surfaces systemic risk — single points of failure, foreign-influence exposure, and concentration risk — that flat tabular tooling can't see.",
         ],
         tags: [ 'Neo4J', 'Java', 'Spring Boot', 'Angular', 'Mongo DB', 'AWS' ],
-        link: null,
+        link: 'https://orbweaver.radialthread.com',
     },
     {
         name: 'Joust',
@@ -48,15 +48,17 @@ export const PROJECTS: Project[] = [
             'End-to-end encrypted chat and video sit alongside, with automatic key cycling. I learned Rust to offload client-side encryption into WASM for performance, and shipped native Android + iOS apps in React Native.',
         ],
         tags: [
+            'Java',
             'Spring Boot',
-            'Angular 20',
-            'Rust/WASM',
+            'Angular',
+            'Rust',
+            'WASM',
             'MariaDB',
             'Redis',
             'React Native',
-            'AWS ECS',
+            'AWS',
         ],
-        link: 'https://joustip.com',
+        link: 'https://www.joustip.com',
     },
     {
         name: 'Surfr',
@@ -68,7 +70,7 @@ export const PROJECTS: Project[] = [
             'Monitored thousands of public radio streams in real time. The moment a song changed, custom classification + indexing pushed it to every listener tuned to that genre over MQTT.',
             'Open the app, pick a genre, ride an endless waterfall of new music — tap any track to connect straight into the source stream. Loved by users; monetization never caught up. Wound down 2021.',
         ],
-        tags: [ 'MQTT', 'Java', 'Spring', 'Android', 'iOS', 'AWS' ],
+        tags: [ 'MQTT', 'Java', 'Spring Boot', 'Angular', 'Android', 'iOS', 'AWS' ],
         link: null,
     },
     {
@@ -91,7 +93,7 @@ export const PROJECTS: Project[] = [
         role: 'Creator · co-founder',
         tagline: 'Online access to top talk-radio stations — ~10M hits/month at its peak.',
         desc: [
-            'First real venture, founded straight out of college. Built the entire stack — Spring MVC, Hibernate, MySQL on AWS, iPhone and Android clients, a JSON/XML API for mobile.',
+            'First real venture, founded in college. Built the entire stack — Spring MVC, Hibernate, MySQL on AWS, iPhone and Android clients, a JSON/XML API for mobile.',
             'Attracted a silent partner with a $25K investment and ran for nearly two decades. The schoolhouse where I learned to ship.',
         ],
         tags: [ 'Spring MVC', 'Hibernate', 'MySQL', 'iOS', 'Android', 'AWS' ],
